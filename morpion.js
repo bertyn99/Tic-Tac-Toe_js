@@ -50,8 +50,12 @@ class Board{
     Array.from(new Set([this.board[6], this.board[7], this.board[8]])).length==1 &&  Array.from(new Set([this.board[6], this.board[7], this.board[8]]))!=[" "]||
     Array.from(new Set([this.board[0], this.board[3], this.board[6]])).length==1 &&  Array.from(new Set([this.board[0], this.board[3], this.board[6]]))!=[" "]||
     Array.from(new Set([this.board[1], this.board[4], this.board[7]])).length==1 &&  Array.from(new Set([this.board[1], this.board[4], this.board[7]]))!=[" "]||
-    Array.from(new Set([this.board[2], this.board[5], this.board[8]])).length==1 &&  Array.from(new Set([this.board[2], this.board[5], this.board[8]]))!=[" "]
-   }
+    Array.from(new Set([this.board[2], this.board[5], this.board[8]])).length==1 &&  Array.from(new Set([this.board[2], this.board[5], this.board[8]]))!=[" "]|| 
+    Array.from(new Set([this.board[0], this.board[4], this.board[8]])).length==1 &&  Array.from(new Set([this.board[0], this.board[4], this.board[8]]))!=[" "]||
+    Array.from(new Set([this.board[2], this.board[4], this.board[6]])).length==1 &&  Array.from(new Set([this.board[2], this.board[4], this.board[6]]))!=[" "]  
+
+
+    }
 
    tie(){
      return this.board.includes("")
