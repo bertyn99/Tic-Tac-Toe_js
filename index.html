@@ -11,7 +11,7 @@
 <body>
                     <h1>Jeux du morpion</h1>
 
-                <form name="joueur" id="form-joeur">
+                <form name="joueur" id="form-joueur">
                     <p>
                         <label >Votre pseudo </label> : <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="10"/>
                         <input type="radio" required name="camp1" id="X" value="X"> <label for="X">X</label>
@@ -26,22 +26,22 @@
                        
                     </p>
 
-                    <input type="button" value="Envoyer" onclick="pseudoP();" />
+                    <input type="button" value="Envoyer" onclick="valeurPseudo();" />
                 </form>
                
     <div style="text-align: center;">
             <table >
 
                  <tr>
-                        <td ></td> <td></td> <td></td>
+                        <td onclick="gam1.coup(this)" ></td> <td onclick="gam1.coup(this)"></td> <td onclick="gam1.coup(this)"></td>
                 </tr>
 
                 <tr>
-                    <td></td> <td></td> <td></td>
+                    <td onclick="gam1.coup(this)"></td> <td onclick="gam1.coup(this)"></td> <td onclick="gam1.coup(this)"></td>
                 </tr>
                 
                 <tr>
-                    <td></td> <td></td> <td></td>
+                    <td onclick="gam1.coup(this)"></td> <td onclick="gam1.coup(this)"></td> <td onclick="gam1.coup(this)"></td>
                 </tr>   
             
         </table>

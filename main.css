@@ -43,6 +43,9 @@ fieldset {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+input:valid{
+  box-shadow: rgb(19, 143, 19)
+}
 
 input:invalid {
   box-shadow: 0 0 5px 1px red;

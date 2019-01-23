@@ -34,7 +34,7 @@ class Board{
         document.getElementById("but").onclick = function afficher()
         {
             for( var i=0 ;i<9; i++){
-            document.getElementsByTagName("td")[i].innerHTML=bob.board[i];
+                bob.board[i]=document.getElementsByTagName("td")[i].innerHTML;
             }
         }
      
@@ -72,23 +72,46 @@ class Player{
 class Game{
     constructor(){
             
-           
-            this.j2=document.forms["joueur"].elements[3].value;
-            
-        
-            
+            this.j1=new Player(valeurPseudo("camp1"),document.forms["joueur"].elements[0].value)
+            this.j2=new Player(valeurPseudo("camp2"),document.forms["joueur"].elements[3].value)
+            this.tab=new Board;
+            this.symbole=true //true ==x et false==O
         
     }
 
+    tour(){
+
+        if(this.tab.board){
+
+        }
+    }
+
+    coup(div){//saisie des coup
+    
+        if(div.innerHTML.length == 0){
+            if(this.symbole == true){
+                div.innerHTML="X";
+            }else {
+                div.innerHTML="O";
+            }
+        }
+       this.symbole=!this.symbole;
+    }
+
+  
+
+
 }
 
-let bob = new Board;
+const bob = new Board;
 bob.affichage();
-var c,v;
-document.getElementsByTagName("table")[0].style.visibility="hidden"
+const gam1=new Game;
 
 
-function pseudo(clas_radio){// fonction qui donne le choix fais pas l'utilisateur dans l'input radio
+document.getElementsByTagName("table")[0].style.display="none"
+
+
+function valeurPseudo(clas_radio){// fonction qui donne le choix fais par l'utilisateur dans l'input radio
     var radios = document.getElementsByName(clas_radio);
     var valeur;
          for(var i = 0; i < radios.length; i++){
@@ -97,6 +120,8 @@ function pseudo(clas_radio){// fonction qui donne le choix fais pas l'utilisateu
                     }
         
             } 
+
+            document.getElementsByTagName("table")[0].style.display=""
+            document.getElementById("form-joueur").style.display="none"
 }
 
- 
