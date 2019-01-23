@@ -4,7 +4,7 @@
 
  class Boardcase {
     constructor(){
-        this.boardcase="X";
+        this.boardcase="";
     }
 }
 
@@ -31,12 +31,12 @@ class Board{
 
    affichage(){// affichage desvaleur de board dans le table html
 
-        document.getElementById("but").onclick = function afficher()
-        {
+       
+        
             for( var i=0 ;i<9; i++){
-                bob.board[i]=document.getElementsByTagName("td")[i].innerHTML;
+                this.board[i]=document.getElementsByTagName("td")[i].innerHTML;
             }
-        }
+    
      
    }
 
@@ -96,16 +96,29 @@ class Game{
             }
         }
        this.symbole=!this.symbole;
+       this.tab.affichage();
     }
 
+    start(){
+        this.tab.affichage();
+        if(this.tab.game_over()==true && this.symbole==true){
+            alert( this.j1.name+" a gagné")
+        }else if (this.tab.game_over()==true && this.symbole==false) {
+
+            alert( this.j2.name+" a gagné")
+        } else {
+            
+        }
+
+    }
   
 
 
 }
 
-const bob = new Board;
-bob.affichage();
+
 const gam1=new Game;
+gam1.start();
 
 
 document.getElementsByTagName("table")[0].style.display="none"
