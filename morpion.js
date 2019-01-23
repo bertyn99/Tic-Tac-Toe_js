@@ -58,7 +58,7 @@ class Board{
     }
 
    tie(){
-     return this.board.includes("")
+     console.log(this.board.includes(""));
    }
 }
 
@@ -69,14 +69,34 @@ class Player{
     }
 }
 
+class Game{
+    constructor(){
+            
+           
+            this.j2=document.forms["joueur"].elements[3].value;
+            
+        
+            
+        
+    }
 
+}
 
 let bob = new Board;
 bob.affichage();
+var c,v;
+document.getElementsByTagName("table")[0].style.visibility="hidden"
 
 
-
-
-
+function pseudo(clas_radio){// fonction qui donne le choix fais pas l'utilisateur dans l'input radio
+    var radios = document.getElementsByName(clas_radio);
+    var valeur;
+         for(var i = 0; i < radios.length; i++){
+                if(radios[i].checked){
+                   return valeur = radios[i].value;
+                    }
+        
+            } 
+}
 
  

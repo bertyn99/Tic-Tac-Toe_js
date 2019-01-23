@@ -11,6 +11,24 @@
 <body>
                     <h1>Jeux du morpion</h1>
 
+                <form name="joueur" id="form-joeur">
+                    <p>
+                        <label >Votre pseudo </label> : <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="10"/>
+                        <input type="radio" required name="camp1" id="X" value="X"> <label for="X">X</label>
+                        <input type="radio" required name="camp1" id="O" value="O"> <label for="O">O</label>
+                   
+                    </p>
+
+                    <p>
+                            <label >Votre pseudo </label> : <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="10"/>
+                            <input type="radio" required name="camp2" id="side" value="X"> <label for="X">X</label>
+                            <input type="radio" required name="camp2" id="side" value="O"> <label for="O">O</label>
+                       
+                    </p>
+
+                    <input type="button" value="Envoyer" onclick="pseudoP();" />
+                </form>
+               
     <div style="text-align: center;">
             <table >
 
